@@ -18,7 +18,7 @@ const Theme = {
 const body = document.body
 let toggleBtn = document.querySelector('.theme-switch__toggle')
 
-if(localStorage.length == 1){
+if((localStorage.length == 1) || (localStorage.length == 0)){
   localStorage.setItem('themeChange', Theme.LIGHT)
 }
 
@@ -33,12 +33,11 @@ toggleBtn.addEventListener('change', () => {
     localStorage.setItem('themeChange', Theme.DARK)
     body.classList.add(Theme.DARK)
     body.classList.remove(Theme.LIGHT)
+    console.log('change to dark theme')
   }else{
     localStorage.setItem('themeChange', Theme.LIGHT)
     body.classList.add(Theme.LIGHT)
     body.classList.remove(Theme.DARK)
+    console.log('change to light theme')
   }
 })
-
-
-
