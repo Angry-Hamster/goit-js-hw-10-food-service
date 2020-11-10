@@ -18,7 +18,7 @@ const Theme = {
 const body = document.body
 let toggleBtn = document.querySelector('.theme-switch__toggle')
 
-if((localStorage.length == 1) || (localStorage.length == 0)){
+if((localStorage.length == 0)){
   localStorage.setItem('themeChange', Theme.LIGHT)
 }
 
